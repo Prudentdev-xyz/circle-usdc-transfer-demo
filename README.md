@@ -1,0 +1,56 @@
+circle-usdc-transfer-demo
+A beginner-friendly demo for creating and transferring USDC between Circle developer-controlled wallets entirely from the backend using TypeScript and the Circle API on Ethereum Sepolia testnet.
+
+What This Does
+•	Creates two smart contract wallets programmatically via Circle's API
+•	Funds Wallet A from Circle's testnet faucet
+•	Transfers USDC from Wallet A to Wallet B from the backend , no frontend, no user approval
+
+Prerequisites
+•	Node.js installed on your machine
+•	A Circle developer account, sign up at https://console.circle.com/signin
+•	VS Code or any code editor
+•	
+Setup
+1. Clone the repository
+git clone https://github.com/Prudentdev-xyz/circle-usdc-transfer-demo.git
+cd circle-usdc-transfer-demo
+2. Install dependencies
+npm i
+3. Create your .env file at the root of the project
+CIRCLE_API_KEY=
+CIRCLE_ENTITY_SECRET=
+WALLET_A_ID=
+WALLET_B_ADDRESS=
+USDC_ID=
+
+Steps
+Generate your entity secret
+npx tsx src/generate-secret.ts
+Copy the output and paste it next to CIRCLE_ENTITY_SECRET= in your .env file.
+Register the entity secret
+npx tsx src/register-secret.ts
+This generates two recovery files at the root of your project. Keep them safe and never push them to GitHub.
+Create two smart contract wallets
+npx tsx src/wallet.ts
+Copy Wallet A's ID into WALLET_A_ID= and Wallet B's address into WALLET_B_ADDRESS= in your .env file.
+Then set your USDC token ID:
+USDC_ID=5797fbd6-3795-519d-84ca-ec4c5f80c3b1
+Fund Wallet A
+Visit https://console.circle.com/faucet/circle-wallet, enter Wallet A's ID, select USDC and ETH Sepolia, then click Send tokens.
+Transfer USDC from Wallet A to Wallet B
+npx tsx src/transfer.ts
+A transaction hash will be printed in your terminal when complete.
+
+Verify the Transaction
+Go to https://sepolia.etherscan.io and search your transaction hash to confirm the transfer on-chain.
+
+Important
+Never push your .env file or recovery files to GitHub. Make sure your .gitignore includes:
+node_modules/
+.env
+recovery_file_1779644337947.dat
+recovery_file_data
+
+Full Article
+Read the full technical walkthrough here, (paste your article link here once published)
