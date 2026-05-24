@@ -12,14 +12,14 @@ A beginner-friendly demo for creating and transferring USDC between Circle devel
 
 - Creates two smart contract wallets programmatically via Circle's API
 - Funds Wallet A from Circle's testnet faucet
-- Transfers USDC from Wallet A to Wallet B from the backend — no frontend, no user approval
+- Transfers USDC from Wallet A to Wallet B from the backend, no frontend, no user approval
 
 ---
 
 ## Prerequisites
 
 - Node.js installed on your machine
-- A Circle developer account — sign up at https://console.circle.com/signin
+- A Circle developer account, sign up at https://console.circle.com/signin
 - VS Code or any code editor
 
 ---
