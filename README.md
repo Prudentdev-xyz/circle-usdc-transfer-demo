@@ -108,8 +108,6 @@ Never push your `.env` file or recovery files to GitHub. Make sure your `.gitign
 ```
 node_modules/
 .env
-recovery_file_1779644337947.dat
-recovery_file_data
 ```
 
 ---
