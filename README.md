@@ -114,6 +114,6 @@ node_modules/
 
 ## Full Article
 
-Read the full technical walkthrough here — *(paste your article link once published)*
+Read the full technical walkthrough here — *https://medium.com/@prudenttalks/how-i-moved-usdc-between-two-smart-contract-wallets-from-the-backend-using-circles-api-530077172201*
 
 ---
